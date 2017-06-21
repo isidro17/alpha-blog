@@ -14,7 +14,7 @@ class ArticlesController < ApplicationController
   
   def create
     #render plain: params[:article].inspect
-    debugger # Si escribo esta linea aqui, permite parar la ejecucion del server cuando llegue a este punto
+    # debugger # Si escribo esta linea aqui, permite parar la ejecucion del server cuando llegue a este punto
     @article = Article.new(article_params)
     @article.user = User.first # Asegura un valor default para cada creador de un articulo
     if @article.save
